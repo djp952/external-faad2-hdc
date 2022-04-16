@@ -1176,7 +1176,8 @@ static int faad_main(int argc, char *argv[])
                     if ((object_type != LC) &&
                         (object_type != MAIN) &&
                         (object_type != LTP) &&
-                        (object_type != LD))
+                        (object_type != LD) &&
+                        (object_type != HDC_LC))
                     {
                         showHelp = 1;
                     }

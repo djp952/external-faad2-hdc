@@ -655,7 +655,11 @@ uint8_t sbrDecodeSingleFramePS(sbr_info *sbr, real_t *left_channel, real_t *righ
 
     /* perform parametric stereo */
 #ifdef DRM_PS
+#ifdef HDC
+    if (sbr->Is_DRM_SBR || sbr->Is_HDC_SBR)
+#else
     if (sbr->Is_DRM_SBR)
+#endif
     {
         drm_ps_decode(sbr->drm_ps, (sbr->ret > 0), X_left, X_right);
     } else {

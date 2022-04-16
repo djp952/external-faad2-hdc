@@ -1,4 +1,4 @@
-lib_LTLIBRARIES = libfaad.la libfaad_drm.la
+lib_LTLIBRARIES = libfaad.la libfaad_drm.la libfaad_hdc.la
 
 AM_CPPFLAGS	= -iquote $(top_srcdir)/include
 include_HEADERS = $(top_srcdir)/include/faad.h \
@@ -34,6 +34,11 @@ libfaad_drm_la_LDFLAGS = ${libfaad_la_LDFLAGS}
 libfaad_drm_la_LIBADD = ${libfaad_la_LIBADD}
 libfaad_drm_la_CFLAGS = ${libfaad_la_CFLAGS} -DDRM_SUPPORT
 libfaad_drm_la_SOURCES = ${libfaad_la_SOURCES}
+
+libfaad_hdc_la_LDFLAGS = ${libfaad_la_LDFLAGS}
+libfaad_hdc_la_LIBADD = ${libfaad_la_LIBADD}
+libfaad_hdc_la_CFLAGS = ${libfaad_la_CFLAGS} -DHDC_SUPPORT
+libfaad_hdc_la_SOURCES = ${libfaad_la_SOURCES}
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = faad2.pc
