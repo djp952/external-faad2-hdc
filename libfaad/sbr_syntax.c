@@ -155,7 +155,7 @@ uint8_t sbr_extension_data(bitfile *ld, sbr_info *sbr, uint16_t cnt,
 #ifdef DRM
     if (!sbr->Is_DRM_SBR)
 #endif
-#ifdef HDC
+#ifdef NRSC5_HDC
     if (!sbr->Is_HDC_SBR)
 #endif
     {
@@ -251,7 +251,7 @@ uint8_t sbr_extension_data(bitfile *ld, sbr_info *sbr, uint16_t cnt,
 #ifdef DRM
     if (!sbr->Is_DRM_SBR)
 #endif
-#ifdef HDC
+#ifdef NRSC5_HDC
     if (!sbr->Is_HDC_SBR)
 #endif
     {
@@ -397,7 +397,7 @@ static uint8_t sbr_single_channel_element(bitfile *ld, sbr_info *sbr)
         faad_get1bit(ld);
     }
 #endif
-#ifdef HDC
+#ifdef NRSC5_HDC
     if (sbr->Is_HDC_SBR)
     {
         faad_get1bit(ld);

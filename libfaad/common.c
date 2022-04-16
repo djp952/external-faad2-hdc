@@ -168,7 +168,7 @@ int8_t can_decode_ot(const uint8_t object_type)
 #endif
 #endif
 
-#ifdef HDC
+#ifdef NRSC5_HDC
     case HDC_LC:
         return 0;
 #endif

@@ -350,7 +350,7 @@ long NeAACDecInit(NeAACDecHandle hpDecoder,
     if (!*samplerate)
         return -1;
 
-#ifdef HDC
+#ifdef NRSC5_HDC
     if (hDecoder->config.defObjectType == HDC_LC)
     {
         hDecoder->object_type = hDecoder->config.defObjectType;
@@ -536,7 +536,7 @@ char NeAACDecInitDRM(NeAACDecHandle *hpDecoder,
 }
 #endif
 
-#ifdef HDC
+#ifdef NRSC5_HDC
 char NeAACDecInitHDC(NeAACDecHandle *hpDecoder,
                                  unsigned long *samplerate)
 {

@@ -176,7 +176,7 @@ typedef struct
 #endif
 #endif
 
-#ifdef HDC
+#ifdef NRSC5_HDC
     uint8_t Is_HDC_SBR;
 #endif
 
